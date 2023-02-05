@@ -16,5 +16,5 @@ export const usePostHog = (apiKey: string, config?: Partial<PostHogConfig>, name
     return () => {
       router.events.off('routeChangeComplete', handleRouteChange)
     }
-  }, [])
+  }, [router.events])
 }

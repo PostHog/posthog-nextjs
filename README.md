@@ -69,3 +69,4 @@ export default App
 
 - React
 - Next.js
+- posthog-js

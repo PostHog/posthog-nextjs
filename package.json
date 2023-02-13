@@ -31,9 +31,12 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "prepublish": "tsc"
+    "prepublish": "tsc",
+    "preexample": "yalc publish && cd example && yalc add next-use-posthog",
+    "example": "cd example && yarn dev"
   },
   "dependencies": {
+    "next-use-posthog": "file:.yalc/next-use-posthog",
     "posthog-js": "^1.38.0"
   },
   "peerDependencies": {

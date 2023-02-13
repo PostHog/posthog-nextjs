@@ -2,6 +2,10 @@
 
 This is just a convenience wrapper around [posthog-js](https://github.com/PostHog/posthog-js) for [Next.js](https://nextjs.org)
 
+# V2.0 breaking changes
+
+In v2.0.0 we moved PostHog to be a peer dependency so you can control which version of PostHog you use without needing changes to this integration.
+
 ## Install
 
 `yarn add next-use-posthog`
@@ -13,56 +17,56 @@ In `pages/_app.js` or `pages/_app.tsx`
 ### JavaScript
 
 ```typescript
-import { usePostHog } from 'next-use-posthog'
+import { usePostHog } from "next-use-posthog";
 
 const App = ({ Component, pageProps }) => {
-  usePostHog('API_KEY', {
-    api_host: 'https://app.posthog.com',
-  })
+  usePostHog("API_KEY", {
+    api_host: "https://app.posthog.com",
+  });
 
-  return <Component {...pageProps} />
-}
+  return <Component {...pageProps} />;
+};
 
-export default App
+export default App;
 ```
 
 ### TypeScript
 
 ```typescript
-import { usePostHog } from 'next-use-posthog'
-import { AppProps } from 'next/app'
-import { FC } from 'react'
+import { usePostHog } from "next-use-posthog";
+import { AppProps } from "next/app";
+import { FC } from "react";
 
 const App: FC<AppProps> = ({ Component, pageProps }) => {
-  usePostHog('API_KEY', {
-    api_host: 'https://app.posthog.com',
-  })
+  usePostHog("API_KEY", {
+    api_host: "https://app.posthog.com",
+  });
 
-  return <Component {...pageProps} />
-}
+  return <Component {...pageProps} />;
+};
 
-export default App
+export default App;
 ```
 
 ### Disable in development
 
 ```typescript
-import { usePostHog } from 'next-use-posthog'
-import { AppProps } from 'next/app'
-import { FC } from 'react'
+import { usePostHog } from "next-use-posthog";
+import { AppProps } from "next/app";
+import { FC } from "react";
 
 const App: FC<AppProps> = ({ Component, pageProps }) => {
-  usePostHog('API_KEY', {
-    api_host: 'https://app.posthog.com',
+  usePostHog("API_KEY", {
+    api_host: "https://app.posthog.com",
     loaded: (posthog) => {
-      if (process.env.NODE_ENV === 'development') posthog.opt_out_capturing();
+      if (process.env.NODE_ENV === "development") posthog.opt_out_capturing();
     },
   });
 
-  return <Component {...pageProps} />
-}
+  return <Component {...pageProps} />;
+};
 
-export default App
+export default App;
 ```
 
 ## Dependencies

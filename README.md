@@ -2,6 +2,8 @@
 
 This is just a convenience wrapper around [posthog-js](https://github.com/PostHog/posthog-js) for [Next.js](https://nextjs.org)
 
+We recommend using [the approach outlined in our documentation](https://posthog.com/docs/integrate/third-party/next-js) over using this integration. 
+
 # V2.0 breaking changes
 
 In v2.0.0 we moved PostHog to be a peer dependency so you can control which version of PostHog you use without needing changes to this integration.

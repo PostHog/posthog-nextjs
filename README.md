@@ -1,4 +1,4 @@
-# This is now depricated
+# This is now deprecated
 
 We now offer a PostHog provider and hooks which makes setup easier and more reliable.
 

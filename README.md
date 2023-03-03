@@ -1,22 +1,26 @@
-# next-use-posthog
+# This is now depricated
 
-This is just a convenience wrapper around [posthog-js](https://github.com/PostHog/posthog-js) for [Next.js](https://nextjs.org)
+We now offer a PostHog provider and hooks which makes setup easier and more reliable.
 
-We recommend using [the approach outlined in our documentation](https://posthog.com/docs/integrate/third-party/next-js) over using this integration. 
+We recommend using [the approach outlined in our documentation](https://posthog.com/docs/integrate/third-party/next-js)
 
-# V2.0 breaking changes
+<hr/>
+
+## Old notes
+
+### V2.0 breaking changes
 
 In v2.0.0 we moved PostHog to be a peer dependency so you can control which version of PostHog you use without needing changes to this integration.
 
-## Install
+### Install
 
 `yarn add next-use-posthog`
 
-## Usage
+### Usage
 
 In `pages/_app.js` or `pages/_app.tsx`
 
-### JavaScript
+#### JavaScript
 
 ```typescript
 import { usePostHog } from "next-use-posthog";
@@ -32,7 +36,7 @@ const App = ({ Component, pageProps }) => {
 export default App;
 ```
 
-### TypeScript
+#### TypeScript
 
 ```typescript
 import { usePostHog } from "next-use-posthog";
@@ -50,7 +54,7 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
 export default App;
 ```
 
-### Disable in development
+#### Disable in development
 
 ```typescript
 import { usePostHog } from "next-use-posthog";
@@ -71,7 +75,7 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
 export default App;
 ```
 
-## Dependencies
+### Dependencies
 
 - React
 - Next.js
